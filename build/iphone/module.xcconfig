@@ -1,0 +1,4 @@
+// this is a generated file - DO NOT EDIT
+
+TI_HEALTHKIT_OTHER_LDFLAGS=$(inherited) -weak_framework HealthKit
+OTHER_LDFLAGS=$(inherited) $(TI_HEALTHKIT_OTHER_LDFLAGS) 

@@ -1,0 +1,45 @@
+<Alloy>
+	<Collection src="authorizations" />
+	<TabGroup>
+		<Tab title="Authorizations" icon="KS_nav_ui.png">
+			<Window title="Authorizations">
+				<!-- <Label>I am Window 1</Label> -->
+				<View top="0" height="20">
+					<Label text='Share' left='60%'/>
+					<Label text='Read' right="5" />
+				</View>
+				<TableView dataCollection="authorizations" top="20" bottom="40">
+					<TableViewRow height='40'>
+						<Label text="{name}" left='10' width="60%" textAlign='Ti.UI.TEXT_ALIGNMENT_LEFT' />
+						<Switch left="60%" auth_id="{id}" value="{shareRequested}" enabled="{shareEnabled}" onChange="shareChanged" />
+						<Switch right="5" auth_id="{id}" value="{readRequested}" enabled="{readEnabled}" onChange="readChanged" />
+					</TableViewRow>
+				</TableView>
+				<Button title='Request Authorization' onClick='onRequestAuthClick' bottom="0"/>
+			</Window>
+		</Tab>
+		<Tab title="Workout" icon="KS_nav_views.png">
+			<Window title="Workout" layout="vertical">
+				<!-- <Label>I am Window 2</Label> -->
+				<Label text='Choose workout type' />
+				<Picker id='typePicker' selectionIndicator='true' height="200">
+					<PickerRow title="Running" />
+					<PickerRow title="Soccer" />
+					<PickerRow title="Tennis" />
+					<PickerRow title="Yoga" />
+				</Picker>
+				<Label text='Start Time'/>
+				<Picker id='startPicker' selectionIndicator='true' height="100"  type="Ti.UI.PICKER_TYPE_TIME"/>
+				<Label text='End Time'/>
+				<Picker id='endPicker' selectionIndicator='true' top='10' height="100" type='Ti.UI.PICKER_TYPE_TIME'/>
+				<Button id='addEventButton' title='Add Event' bottom='10' onClick='onAddEventButtonClick'/>
+			</Window>
+		</Tab>
+		<Tab title="BMI" icon="KS_nav_views.png">
+			<Window title="BMI" >
+				<Button title="Read latest BMI data" onClick="bmiClick" top="100"/>
+				<Label id="bmi_label" />
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>

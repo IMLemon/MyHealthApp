@@ -1,0 +1,1 @@
+var Alloy=require("alloy"),_=Alloy._,Backbone=Alloy.Backbone,TiHealthkit=require("ti.healthkit");Alloy.createController("index");

@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: HealthKit Module
+author: Zsombor Papp
+license: Appcelerator Commercial License
+copyright: Copyright (c) 2015 by Appcelerator, Inc.
+
+# these should not be edited
+name: ti.healthkit
+moduleid: ti.healthkit
+guid: c203a113-6ccc-4d44-846a-5328463d2187
+platform: iphone
+minsdk: 3.5.0.GA
